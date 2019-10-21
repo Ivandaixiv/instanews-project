@@ -4,10 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Instanews</title>
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+    <header>
+        <a href="./index.html">
+            <img src="./images/nyt-logo.svg" alt="New York Times Logo" class="nyt-logo">
+        </a>
+    </header>
+    <section class="selection-wrapper">
+        <label for="news-select">Choose a section</label>
+        <select name="news-selection" id="news-select">
+            <option value="">Section...</option>
+            <!-- Number of new sections to choose from -->
+        </select>
+    </section>
+    <footer>&copy; Copyright 2019 INSTANEWS</footer>
     <script src="./build/js/script.min.js"></script>
 </body>
 </html>
