@@ -8,9 +8,6 @@ html {
 /* Global Selector Styling */
 body {
     background: black;
-    font-family: Open Sans;
-    font-weight: 300;
-    color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,7 +23,15 @@ header {
     width: 100%
 }
 footer {
+    margin: 20px;
     color: #c2c2c2;
+    font-size: 20px;
+}
+.open-sans {
+    font-family: Open Sans;
+    font-weight: 300;
+    color: #ffffff;
+    font-size: 16px;
 }
 /* Intial Logo and selection landing page mobile */
 .logo-wrapper {
@@ -38,8 +43,31 @@ footer {
     height: 300px;
 }
 .selection-wrapper {
-    height: 50px;
+    height: 60px;
+    font-size: 18px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.news-selection {
+    margin: 0 auto;
+    font-size: 18px;
+}
+@media screen and (min-width:600px) {
+    header {
+        flex-direction: row;
+        width: 70%;
+        justify-content: flex-start;
+    }
+    .logo-wrapper {
+        width: 50%;
+    }
+}
+@media screen and (min-width:1240px) {
+    body {
+        align-items: flex-start;
+    }
+    header {
+        width: 700px;
+    }
 }
