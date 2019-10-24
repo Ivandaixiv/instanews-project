@@ -5,9 +5,11 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
+/* Global Selector Styling */
 body {
     background: black;
     font-family: Open Sans;
+    font-weight: 300;
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -19,8 +21,14 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    height: 375px;
     width: 100%
 }
+footer {
+    color: #c2c2c2;
+}
+/* Intial Logo and selection landing page mobile */
 .logo-wrapper {
     display: flex;
     justify-content: center;
