@@ -7,22 +7,31 @@ html {
 }
 body {
     background: black;
-    color: white;
+    font-family: Open Sans;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: 100vh;
 }
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%
+}
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 80%;
 }
 .nyt-logo {
-    transform: scale(1.5);
+    height: 300px;
 }
 .selection-wrapper {
+    height: 50px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }

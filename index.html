@@ -7,24 +7,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Instanews</title>
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
     <header>
-        <a href="./index.html">
-            <img src="./images/nyt-logo.svg" alt="New York Times Logo" class="nyt-logo">
-        </a>
+        <div class="logo-wrapper">
+            <a href="./index.html">
+                <img src="./images/nyt-logo.svg" alt="New York Times Logo" class="nyt-logo">
+            </a>
+        </div>  
+        <div class="selection-wrapper">
+            <label for="news-select">Choose a section</label>
+            <select name="news-selection" id="news-select">
+                <option value="">Section...</option>
+                <option value="">Home</option>
+                <option value="">Arts</option>
+                <option value="">Business</option>
+                <option value="">Sports</option>
+                <option value="">Technology</option>
+                <option value="">Fashion</option>
+                <!-- Number of new sections to choose from -->
+            </select>
+        </div>
     </header>
-    <section class="selection-wrapper">
-        <label for="news-select">Choose a section</label>
-        <select name="news-selection" id="news-select">
-            <option value="">Section...</option>
-            <!-- Number of new sections to choose from -->
-        </select>
-    </section>
+    <section class="articles">
 
+    </section>
     <footer>&copy; Copyright 2019 INSTANEWS</footer>
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+              crossorigin="anonymous">
+    </script>
     <script src="./build/js/script.min.js"></script>
 </body>
 
