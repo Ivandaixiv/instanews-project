@@ -53,6 +53,34 @@ footer {
     margin: 0 auto;
     font-size: 18px;
 }
+.articles {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.currentNews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.article-box {
+    display: flex;
+    align-items: flex-end;
+    height: 400px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.article-link {
+    text-decoration: none;
+}
+.article-text {
+    color: #ffffff;
+    padding: 10px;
+    line-height: 1.25em;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));;
+}
 @media screen and (min-width:600px) {
     header {
         flex-direction: row;
