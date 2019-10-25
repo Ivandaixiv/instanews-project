@@ -1,0 +1,30 @@
+@mixin desktop {
+    @media (min-width: $desktop-width){
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: $tablet-width){
+        @content;
+    }
+}
+header {
+    @include tablet {
+        flex-direction: row;
+        width: 70%;
+        justify-content: flex-start;
+    }
+}
+// @media screen and (min-width:600px) {
+//     .logo-wrapper {
+//         width: 50%;
+//     }
+// }
+// @media screen and (min-width:1240px) {
+//     body {
+//         align-items: flex-start;
+//     }
+//     header {
+//         width: 700px;
+//     }
+// }

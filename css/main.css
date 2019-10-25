@@ -67,10 +67,11 @@ footer {
 .article-box {
     display: flex;
     align-items: flex-end;
-    height: 400px;
+    height: 420px;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 50%;
 }
 .article-link {
     text-decoration: none;
@@ -80,22 +81,4 @@ footer {
     padding: 10px;
     line-height: 1.25em;
     background-image: linear-gradient(to top, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));;
-}
-@media screen and (min-width:600px) {
-    header {
-        flex-direction: row;
-        width: 70%;
-        justify-content: flex-start;
-    }
-    .logo-wrapper {
-        width: 50%;
-    }
-}
-@media screen and (min-width:1240px) {
-    body {
-        align-items: flex-start;
-    }
-    header {
-        width: 700px;
-    }
 }
