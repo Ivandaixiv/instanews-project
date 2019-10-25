@@ -5,7 +5,8 @@ const gulp = require("gulp"),
   eslint = require("gulp-eslint"),
   sass = require("gulp-sass"),
   autoprefixer = require('gulp-autoprefixer'),
-  cssnano = require('gulp-cssnano');
+  cssnano = require('gulp-cssnano'),
+  prettyError = require('gulp-prettyerror');
 
 
 gulp.task('sass', function() {
