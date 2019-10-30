@@ -12,7 +12,7 @@ $(function(){
     })
     .done(function(data){
         // console.log(data);
-        $('.articles').append('<div class="currentNews"></div>');
+        $('.articles').append('<div class="currentNews" id="currentNews"></div>');
         let articleCount = 1;
         let gridCounter = 1;
         $.each(data.results, function(){
@@ -23,18 +23,26 @@ $(function(){
                 if(articleCount <= 12) {
                     $('.currentNews').append('<a class="article-link" href="' + this.url +'"><div class="article-box article' + articleCount + '"> <p class="article-text">' + this.abstract + '</p></div></a>');
                     // console.log(index, this);
+                    $('#currentNews').css('display','grid');
                     // APPLYS A NEW GRID ON EVERY ELEMENT
                     $('.article' + articleCount).css('background-image', 'url(' + this.multimedia[4].url  +')');
                     if(gridCounter == 1 ){
                         $('.article' + articleCount).css('grid-column', '1/2');
                         gridCounter++;
-                    } else if( gridCounter == 2) {
-                        $('.article' + articleCount).css('grid-column', '2/3');
-                        gridCounter++;
                     } else {
                         $('.article' + articleCount).css('grid-column', '3/4');
                         gridCounter = 1;
                     }
+                    // if(gridCounter == 1 ){
+                    //     $('.article' + articleCount).css('grid-column', '1/2');
+                    //     gridCounter++;
+                    // } else if( gridCounter == 2) {
+                    //     $('.article' + articleCount).css('grid-column', '2/3');
+                    //     gridCounter++;
+                    // } else {
+                    //     $('.article' + articleCount).css('grid-column', '3/4');
+                    //     gridCounter = 1;
+                    // }
                     $('body').css({'height' : '5500px' , });
                     $('.nyt-logo').css('height','150px');
                     $('header').css('justify-content', 'space-around'); 

@@ -70,9 +70,12 @@ table {
   font-style: normal; }
 
 @media screen and (min-width: 600px) {
-  body.open-sans .article-link {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; } }
+  body.open-sans .currentNews {
+    grid-template-columns: 1fr 1fr; } }
+
+@media (min-width: 1240px) {
+  body.open-sans .currentNews {
+    grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
@@ -151,6 +154,7 @@ footer {
           -webkit-box-align: end;
                   align-items: flex-end;
           height: 420px;
+          width: 100%;
           background-repeat: no-repeat;
           background-size: cover;
           background-position: 50%; }

@@ -1,8 +1,8 @@
-// @mixin desktop {
-//     @media (min-width: $desktop-width){
-//         @content;
-//     }
-// }
+@mixin desktop {
+    @media (min-width: $desktop-width){
+        @content;
+    }
+}
 @mixin tablet {
     @media screen and (min-width: $tablet-width ){
         @content;
@@ -10,9 +10,13 @@
 }
 body.open-sans {
     @include tablet {
-        .article-link{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+        .currentNews {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @include desktop {
+        .currentNews {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
         }
     }
 }
