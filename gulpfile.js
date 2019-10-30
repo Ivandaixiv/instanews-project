@@ -14,9 +14,7 @@ gulp.task('sass', function() {
     .src('./sass/style.scss')
     .pipe(prettyError())
     .pipe(sass())
-    .pipe(
-        autoprefixer(),
-    )
+    .pipe(autoprefixer())
     .pipe(gulp.dest('./build/css'))
     .pipe(cssnano())
     .pipe(rename('style.min.css'))

@@ -11,7 +11,11 @@
     <!-- <link rel="stylesheet" href="./css/fonts.css"> -->
     <link rel="stylesheet" href="./build/css/style.min.css">
 </head>
-
+<!-- Styling Notes
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ -->
 <body class="open-sans">
     <header>
         <div class="logo-wrapper">
@@ -23,12 +27,12 @@
             <label for="news-selection">Choose a section</label>
             <select name="news-selection" id="news-selection" class="news-selection">
                 <option value="">Sections...</option>
-                <option value="">Home</option>
-                <option value="">Arts</option>
-                <option value="">Business</option>
-                <option value="">Sports</option>
-                <option value="">Technology</option>
-                <option value="">Fashion</option>
+                <option value="home">Home</option>
+                <option value="arts">Arts</option>
+                <option value="business">Business</option>
+                <option value="sports">Sports</option>
+                <option value="technology">Technology</option>
+                <option value="fashion">Fashion</option>
                 <!-- Number of new sections to choose from -->
             </select>
         </div>

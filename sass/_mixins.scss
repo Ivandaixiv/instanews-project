@@ -1,18 +1,19 @@
-@mixin desktop {
-    @media (min-width: $desktop-width){
-        @content;
-    }
-}
+// @mixin desktop {
+//     @media (min-width: $desktop-width){
+//         @content;
+//     }
+// }
 @mixin tablet {
-    @media (min-width: $tablet-width){
+    @media screen and (min-width: $tablet-width ){
         @content;
     }
 }
-header {
+body.open-sans {
     @include tablet {
-        flex-direction: row;
-        width: 70%;
-        justify-content: flex-start;
+        .article-link{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
     }
 }
 // @media screen and (min-width:600px) {
