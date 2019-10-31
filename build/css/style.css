@@ -160,7 +160,9 @@ footer {
           background-position: 50%; }
           .open-sans .articles .currentNews .article-link .article-box .article-text {
             color: #ffffff;
+            width: 100%;
             padding: 10px;
+            text-align: center;
             line-height: 1.25em;
             background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
             background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); }

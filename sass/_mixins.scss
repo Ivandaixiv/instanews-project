@@ -8,6 +8,18 @@
         @content;
     }
 }
+// Website size responsiveness change
+@include tablet {
+    #body {
+        // height: 3000px;
+    }
+}
+@include desktop {
+    #body {
+        // height: 1750px;
+    }
+}
+// grid template changes depending on viewport
 body.open-sans {
     @include tablet {
         .currentNews {

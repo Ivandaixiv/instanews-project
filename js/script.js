@@ -5,9 +5,16 @@ $(function(){
     // movies, national, nyregion, obituaries, opinion, politics, 
     // realestate, science, sports, sundayreview, technology, theater, 
     // tmagazine, travel, upshot, and world.
+
+    const resetPage = () => {
+        $('#currentNews').remove();
+        $('#error').remove();
+        $('#date').remove();
+    }
+    
     const selection = document.getElementById('news-selection');
     selection.addEventListener('change',() => {
-        $('#currentNews').remove();
+        resetPage();
         // console.log(this.activeElement.value);
         $.ajax({
             method: 'GET',
@@ -29,7 +36,10 @@ $(function(){
                         $('#currentNews').css('display','grid');
                         // APPLYS A NEW GRID ON EVERY ELEMENT
                         $('.article' + articleCount).css('background-image', 'url(' + this.multimedia[4].url  +')');
-                        // if(gridCounter == 1 ){
+                        $('body').css({'height' : '5500px' , });
+                        $('.nyt-logo').css('height','150px');
+                        $('header').css('justify-content', 'space-around'); 
+                        articleCount++;   // if(gridCounter == 1 ){
                         //     $('.article' + articleCount).css('grid-column', '1/2');
                         //     gridCounter++;
                         // } else {
@@ -46,21 +56,17 @@ $(function(){
                         //     $('.article' + articleCount).css('grid-column', '3/4');
                         //     gridCounter = 1;
                         // }
-                        $('body').css({'height' : '5500px' , });
-                        $('.nyt-logo').css('height','150px');
-                        $('header').css('justify-content', 'space-around'); 
-                        articleCount++;   
                     }
                 }
             })
         })
         .fail(function(){
-            $('.articles').append('<p>Sorry there was an error.</p>')
+            $('.articles').append('<p id="error">Sorry there was an error. Did you choose properly?</p>')
         })
-        // .always(function(){
-        //     let today = new Date();
-        //     let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-        //     $('.articles').append('<p>Todays Date: ' + date + '</p>')
-        // })
+        .always(function(){
+            let today = new Date();
+            let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+            $('footer').prepend('<p id="date">Todays Date: ' + date + '</p>').css('text-align', 'center');
+        })
     });
 });
