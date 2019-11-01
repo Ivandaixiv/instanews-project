@@ -38,18 +38,21 @@ footer {
     .logo-wrapper {
         display: flex;
         justify-content: center;
-        width: 80%;
+        width: 50%;
 
         .nyt-logo {
             height: 300px;
         }
     }
     .selection-wrapper {
-        height: 60px;
         font-size: 18px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        text-align: center;
+        width: 200px;
+        height: 60px;
+        margin: 10px;
 
         .news-selection {
             margin: 0 auto;
@@ -81,7 +84,6 @@ footer {
                         color: #ffffff;
                         width: 100%;
                         padding: 10px;
-                        text-align: center;
                         line-height: 1.25em;
                         background-image: linear-gradient(to top, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));;
                     }

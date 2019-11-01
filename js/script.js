@@ -16,6 +16,7 @@ $(function(){
     selection.addEventListener('change',() => {
         resetPage();
         // console.log(this.activeElement.value);
+        // PROGRAM AN IF STATEMENT TO CHECK IF THE VALUE IS NULL
         $.ajax({
             method: 'GET',
             url: 'https://api.nytimes.com/svc/topstories/v2/' + this.activeElement.value + '.json?api-key=vRtDeuRkRsAJWXB8I6P5L5cUg3dvnD99'
@@ -36,9 +37,9 @@ $(function(){
                         $('#currentNews').css('display','grid');
                         // APPLYS A NEW GRID ON EVERY ELEMENT
                         $('.article' + articleCount).css('background-image', 'url(' + this.multimedia[4].url  +')');
-                        $('body').css({'height' : '5500px' , });
+                        $('body').css({'height' : '100%' , });
                         $('.nyt-logo').css('height','150px');
-                        $('header').css('justify-content', 'space-around'); 
+                        $('header').css('justify-content', 'center'); 
                         articleCount++;   // if(gridCounter == 1 ){
                         //     $('.article' + articleCount).css('grid-column', '1/2');
                         //     gridCounter++;
@@ -63,10 +64,10 @@ $(function(){
         .fail(function(){
             $('.articles').append('<p id="error">Sorry there was an error. Did you choose properly?</p>')
         })
-        .always(function(){
-            let today = new Date();
-            let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-            $('footer').prepend('<p id="date">Todays Date: ' + date + '</p>').css('text-align', 'center');
-        })
+        // .always(function(){
+        //     let today = new Date();
+        //     let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+        //     $('footer').prepend('<p id="date">Todays Date: ' + date + '</p>').css('text-align', 'center');
+        // })
     });
 });

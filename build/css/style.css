@@ -70,6 +70,22 @@ table {
   font-style: normal; }
 
 @media screen and (min-width: 600px) {
+  body header {
+    width: 80%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row; } }
+
+@media (min-width: 1240px) {
+  .open-sans {
+    -webkit-box-align: start;
+            align-items: flex-start; }
+    .open-sans header .logo-wrapper {
+      width: 300px;
+      -webkit-box-pack: start;
+              justify-content: flex-start; } }
+
+@media screen and (min-width: 600px) {
   body.open-sans .currentNews {
     grid-template-columns: 1fr 1fr; } }
 
@@ -122,11 +138,10 @@ footer {
     display: flex;
     -webkit-box-pack: center;
             justify-content: center;
-    width: 80%; }
+    width: 50%; }
     .open-sans .logo-wrapper .nyt-logo {
       height: 300px; }
   .open-sans .selection-wrapper {
-    height: 60px;
     font-size: 18px;
     display: -webkit-box;
     display: flex;
@@ -134,7 +149,11 @@ footer {
     -webkit-box-direction: normal;
             flex-direction: column;
     -webkit-box-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    text-align: center;
+    width: 200px;
+    height: 60px;
+    margin: 10px; }
     .open-sans .selection-wrapper .news-selection {
       margin: 0 auto;
       font-size: 18px; }
@@ -162,7 +181,6 @@ footer {
             color: #ffffff;
             width: 100%;
             padding: 10px;
-            text-align: center;
             line-height: 1.25em;
             background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
             background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); }
