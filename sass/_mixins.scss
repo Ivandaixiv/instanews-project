@@ -10,40 +10,55 @@
 }
 // Website size responsiveness change
 @include tablet {
-    body {
+    .open-sans {
+        // dont add align-items
         header {
             width: 80%;
             flex-direction: row;
+            justify-content: flex-start;
+            .logo-wrapper {
+                width: 300px;
+                justify-content: flex-start;
+            }
+        }
+        .articles {
+            .currentNews {
+                grid-template-columns: 1fr 1fr;
+            }   
+        }
+        footer {
+            align-self: center;
         }
     }
     // height: 3000px;
 }
 @include desktop {
     .open-sans {
-        align-items: flex-start;
-        header {
-            .logo-wrapper {
-                width: 300px;
-                justify-content: flex-start;
-                // width: 20%;
+        align-items: flex-start; //do not remove
+        .articles {
+            .currentNews {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
             }
+        }
+        footer {
+            align-self: flex-start ;
         }
     }
     // Needed height: 1750px;
 }
 // grid template changes depending on viewport
-body.open-sans {
-    @include tablet {
-        .currentNews {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-    @include desktop {
-        .currentNews {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-    }
-}
+// body.open-sans {
+//     @include tablet {
+//         .currentNews {
+//             grid-template-columns: 1fr 1fr;
+//         }
+//     }
+//     @include desktop {
+//         .currentNews {
+//             grid-template-columns: 1fr 1fr 1fr 1fr;
+//         }
+//     }
+// }
 // @media screen and (min-width:600px) {
 //     .logo-wrapper {
 //         width: 50%;

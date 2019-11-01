@@ -19,25 +19,26 @@ body {
 }
 header {
     display: flex;
-    height: 375px;
+    height: 50%;
     width: 100%;
     @extend %flex-box;
 }
 footer {
     margin: 20px;
-    color: #c2c2c2;
+    color: $base-gray;
     font-size: 20px;
 }
 .open-sans {
-    font-family: Open Sans;
-    font-weight: 300;
+    font-family: $base-font;
+    font-weight: $base-font-weight;
     color: $base-white;
-    font-size: 16px;
+    font-size: $base-font-size;
     
     /* Intial Logo and selection landing page mobile */
     .logo-wrapper {
         display: flex;
         justify-content: center;
+        margin: 10px;
         width: 50%;
 
         .nyt-logo {
@@ -81,7 +82,7 @@ footer {
                     background-position: 50%;
                     
                     .article-text {
-                        color: #ffffff;
+                        color: $base-white;
                         width: 100%;
                         padding: 10px;
                         line-height: 1.25em;

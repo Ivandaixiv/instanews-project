@@ -70,28 +70,30 @@ table {
   font-style: normal; }
 
 @media screen and (min-width: 600px) {
-  body header {
+  .open-sans header {
     width: 80%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-            flex-direction: row; } }
+            flex-direction: row;
+    -webkit-box-pack: start;
+            justify-content: flex-start; }
+    .open-sans header .logo-wrapper {
+      width: 300px;
+      -webkit-box-pack: start;
+              justify-content: flex-start; }
+  .open-sans .articles .currentNews {
+    grid-template-columns: 1fr 1fr; }
+  .open-sans footer {
+    align-self: center; } }
 
 @media (min-width: 1240px) {
   .open-sans {
     -webkit-box-align: start;
             align-items: flex-start; }
-    .open-sans header .logo-wrapper {
-      width: 300px;
-      -webkit-box-pack: start;
-              justify-content: flex-start; } }
-
-@media screen and (min-width: 600px) {
-  body.open-sans .currentNews {
-    grid-template-columns: 1fr 1fr; } }
-
-@media (min-width: 1240px) {
-  body.open-sans .currentNews {
-    grid-template-columns: 1fr 1fr 1fr 1fr; } }
+    .open-sans .articles .currentNews {
+      grid-template-columns: 1fr 1fr 1fr 1fr; }
+    .open-sans footer {
+      align-self: flex-start; } }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
@@ -119,7 +121,7 @@ body {
 header {
   display: -webkit-box;
   display: flex;
-  height: 375px;
+  height: 50%;
   width: 100%; }
 
 footer {
@@ -138,6 +140,7 @@ footer {
     display: flex;
     -webkit-box-pack: center;
             justify-content: center;
+    margin: 10px;
     width: 50%; }
     .open-sans .logo-wrapper .nyt-logo {
       height: 300px; }
