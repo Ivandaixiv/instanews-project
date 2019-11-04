@@ -160,6 +160,14 @@ footer {
     .open-sans .selection-wrapper .news-selection {
       margin: 0 auto;
       font-size: 18px; }
+  .open-sans .loader {
+    display: none;
+    position: absolute;
+    height: 5%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 50%);
+            transform: translate(-50%, 50%); }
   .open-sans .articles {
     width: 100%;
     display: -webkit-box;

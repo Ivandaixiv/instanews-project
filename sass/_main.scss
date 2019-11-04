@@ -60,6 +60,14 @@ footer {
             font-size: 18px;
         }
     }
+    .loader{
+        display: none;
+        position: absolute;
+        height: 5%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,50%);
+    }
     .articles {
         width: 100%;
         display: flex;
